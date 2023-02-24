@@ -72,6 +72,14 @@ const Content: React.FC = () => {
     },
   });
 
+  if (!sessionData?.user) {
+    return (
+      <div className="flex w-full flex-col items-center justify-center p-4">
+        <h1 className="text-3xl">Welcome to NoteTaker</h1>
+      </div>
+    );
+  }
+
   return (
     <div className="mx-5 mt-5 grid grid-cols-4 gap-2">
       <div className="px-2">
